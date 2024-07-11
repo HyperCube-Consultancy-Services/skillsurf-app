@@ -1,20 +1,35 @@
+import "./global.css"
+import { useState } from "react";
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, TouchableWithoutFeedback, Keyboard, SafeAreaView } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+// Screens
+import TestScreen from './screens/TestScreen';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+        <View style={styles.container}>
+          <NavigationContainer>
+            <Stack.Navigator initialRouteName="TestScreen">
+              <Stack.Screen name="TestScreen" component={TestScreen} options={{ headerShown: false }} />
+            </Stack.Navigator>
+          </NavigationContainer>
+          <StatusBar style="light" />
+        </View>
+      </TouchableWithoutFeedback>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
