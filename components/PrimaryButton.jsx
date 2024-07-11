@@ -5,11 +5,10 @@ const PrimaryButton = ({
   text, // Mandatory
   onClick, // Mandatory
   disabled = false, // Optional. Default is false
-  width = "w-full", // Optional. Default is full width. Possible values are 'w-60', 'w-80', 'w-96', 'w-full' or any other tailwindcss width classes.
 }) => {
   return (
     <TouchableOpacity
-      className={`${width}`}
+      className={``}
       onPress={() => {
         onClick();
       }}

@@ -10,9 +10,12 @@ const DropdownBox = ({
   caption = false, // Optional. Default is false. If there is a caption, provide a string.
   captionAlignment = "center", // Optional. Default is center. Possible values are 'start', 'center', 'end'.
   search = false, // Optional. Default is false. If true, search bar will be shown.
+  className = "", // Optional - For margins
 }) => {
   return (
-    <View className={`${width} flex flex-col items-${captionAlignment}`}>
+    <View
+      className={`${width} flex flex-col items-${captionAlignment} ${className}`}
+    >
       {caption && (
         <Text className="text-black-400 text-md mb-2">Select an option</Text>
       )}

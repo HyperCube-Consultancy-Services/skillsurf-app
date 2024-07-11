@@ -35,7 +35,9 @@ const CustomDateTimePicker = ({
     <TouchableOpacity className={`${width}`} onPress={openDatePicker}>
       <View className={`w-full flex flex-col items-${captionAlignment}`}>
         {caption && (
-          <Text className={`text-black-600 text-md text-${captionAlignment}`}>
+          <Text
+            className={`text-black-600 text-md mb-1 text-${captionAlignment}`}
+          >
             {caption}
           </Text>
         )}

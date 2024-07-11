@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // Screens
 import TestScreen from './screens/TestScreen';
+import SignIn from "./screens/SignIn";
 
 const Stack = createNativeStackNavigator();
 
@@ -17,7 +18,8 @@ export default function App() {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
         <View style={styles.container}>
           <NavigationContainer>
-            <Stack.Navigator initialRouteName="TestScreen">
+            <Stack.Navigator initialRouteName="SignIn">
+              <Stack.Screen name="SignIn" component={SignIn} options={{ headerShown: false }} />
               <Stack.Screen name="TestScreen" component={TestScreen} options={{ headerShown: false }} />
             </Stack.Navigator>
           </NavigationContainer>

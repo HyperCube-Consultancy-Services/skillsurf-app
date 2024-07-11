@@ -53,7 +53,7 @@ const TestScreen = () => {
                 <CustomDateTimePicker
                     value={dateValue}
                     setValue={(value) => setDateValue(value)}
-                    type="time"
+                    type="date"
                     caption={'Select Date'}
                     captionAlignment="center" />
             </View>

@@ -28,6 +28,18 @@ module.exports = {
       // Font family - Encode Sans
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'], // 'Inter' as the primary font with fallback to sans-serif
+      },
+
+      height: {
+        'screen-90': '90vh',
+        'screen-80': '80vh',
+        'screen-70': '70vh',
+        'screen-60': '60vh',
+        'screen-50': '50vh',
+        'screen-40': '40vh',
+        'screen-30': '30vh',
+        'screen-20': '20vh',
+        'screen-10': '10vh',
       }
     },
   },
