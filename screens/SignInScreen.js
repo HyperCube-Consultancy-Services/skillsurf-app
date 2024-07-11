@@ -5,7 +5,7 @@ import Foundation from 'react-native-vector-icons/Foundation';
 import PanelLayout from '../components/PanelLayout'; // This is the layout component with white panel
 import SignInCard from '../components/SignInCard';
 
-const SignIn = ({ }) => {
+const SignInScreen = ({ }) => {
     const HeaderContent = () => {
         return (
             <View className="flex-1 items-center justify-center">
@@ -27,4 +27,4 @@ const SignIn = ({ }) => {
     )
 }
 
-export default SignIn;
+export default SignInScreen;

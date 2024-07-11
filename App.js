@@ -7,7 +7,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // Screens
 import TestScreen from './screens/TestScreen';
-import SignIn from "./screens/SignIn";
+import SignInScreen from "./screens/SignInScreen";
+import QuestionnaireScreen from "./screens/QuestionnaireScreen";
+import ChatScreen from "./screens/ChatScreen";
+import CareerPathsScreen from "./screens/CareerPathsScreen";
+import SingleCareerPathScreen from "./screens/SingleCareerPathScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,8 +22,12 @@ export default function App() {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
         <View style={styles.container}>
           <NavigationContainer>
-            <Stack.Navigator initialRouteName="SignIn">
-              <Stack.Screen name="SignIn" component={SignIn} options={{ headerShown: false }} />
+            <Stack.Navigator initialRouteName="SignInScreen">
+              <Stack.Screen name="SignInScreen" component={SignInScreen} options={{ headerShown: false }} />
+              <Stack.Screen name="QuestionnaireScreen" component={QuestionnaireScreen} options={{ headerShown: false }} />
+              <Stack.Screen name="ChatScreen" component={ChatScreen} options={{ headerShown: false }} />
+              <Stack.Screen name="CareerPathsScreen" component={CareerPathsScreen} options={{ headerShown: false }} />
+              <Stack.Screen name="SingleCareerPathScreen" component={SingleCareerPathScreen} options={{ headerShown: false }} />
               <Stack.Screen name="TestScreen" component={TestScreen} options={{ headerShown: false }} />
             </Stack.Navigator>
           </NavigationContainer>
