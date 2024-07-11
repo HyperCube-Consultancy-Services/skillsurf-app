@@ -20,7 +20,7 @@ const DropdownBox = ({
         style={{
           width: "100%",
           height: 40,
-          borderColor: "#A3A3A3",
+          borderColor: "#E0E0E0",
           borderWidth: 1,
           borderRadius: 8,
           paddingHorizontal: 10,
