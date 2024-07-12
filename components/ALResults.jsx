@@ -47,7 +47,7 @@ const ALResults = ({ onNextClick }) => {
     <View className={`flex-1 justify-center items-center px-20`}>
       <FontAwesome5 name="book-open" size={80} color="#2980B9" />
       <Text className={`font-semibold text-3xl text-secondary mt-4`}>
-        G.C.E. O/L Results
+        G.C.E. A/L Results
       </Text>
       <View className={`border border-black-100 w-full my-4`} />
       <TextBox

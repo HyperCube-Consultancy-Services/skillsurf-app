@@ -38,18 +38,18 @@ const PersonalDetails = ({ onNextClick }) => {
           value={dateValue}
           setValue={(value) => setDateValue(value)}
           type="date"
-          caption={"Select Date"}
+          caption={"Birth Day"}
           captionAlignment="center"
         />
       </View>
-      <TextBox
+      {/* <TextBox
         placeholder="Enter your school"
         value={schoolValue}
         setValue={setSchoolValue}
         caption="School"
         captionAlignment="center"
         className="mt-6"
-      />
+      /> */}
 
       <View className="mt-8 w-80">
         <PrimaryButton
