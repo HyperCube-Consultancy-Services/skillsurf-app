@@ -1,7 +1,10 @@
 import { View, Text, Image } from "react-native"
 import PrimaryButton from "../components/PrimaryButton";
+import { useNavigation } from "@react-navigation/native";
 
 const QuestionnaireStart = ({ }) => {
+    const navigation = useNavigation();
+
     return (
         <View className={`flex-1 items-center justify-center bg-white px-16`}>
             <Image
@@ -14,13 +17,15 @@ const QuestionnaireStart = ({ }) => {
             <Text className={`mt-2 text-black-500 font-semibold text-lg text-center`}>
                 Before continuing, please follow next pages to answer some questions.
             </Text>
-            <Text className={`text-black-500 font-normal text-lg text-center`}>
+            {/* <Text className={`text-black-500 font-normal text-lg text-center`}>
                 These questions will help us to understand you better.
-            </Text>
+            </Text> */}
             <View className={`mt-10 w-40`}>
                 <PrimaryButton
                     text="Let's Go"
-                    onClick={() => { }} />
+                    onClick={() => {
+                        navigation.navigate("QuestionnaireScreen");
+                    }} />
             </View>
         </View>
     )

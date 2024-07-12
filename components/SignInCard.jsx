@@ -3,8 +3,11 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import TextBox from "./TextBox";
 import PrimaryButton from "./PrimaryButton";
+import { useNavigation } from "@react-navigation/native";
 
 const SignInCard = () => {
+  const navigation = useNavigation();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -45,6 +48,7 @@ const SignInCard = () => {
             text={"Sign In"}
             onClick={() => {
               console.log("Button CLicked");
+              navigation.navigate("QuestionnaireStart");
             }}
           />
         </View>

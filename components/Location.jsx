@@ -2,60 +2,69 @@ import React, { useState } from "react";
 import { View, Text, Image } from "react-native";
 import TextBox from "../components/TextBox";
 import PrimaryButton from "./PrimaryButton";
+import Entypo from "react-native-vector-icons/Entypo";
+import CircleSet from "./CircleSet";
 
-const Location = ({
-    onNextClick,
-}) => {
-    // State variables for each address component
-    const [streetValue, setStreetValue] = useState("");
-    const [cityValue, setCityValue] = useState("");
-    const [countryValue, setCountryValue] = useState("");
+const Location = ({ onNextClick }) => {
+  // State variables for each address component
+  const [numValue, setNumValue] = useState("");
+  const [streetValue, setStreetValue] = useState("");
+  const [cityValue, setCityValue] = useState("");
+  const [districtValue, setDistrictValue] = useState("");
 
-    return (
-        <View className="flex-1 items-center justify-center p-4">
-            <Image
-                source={require('../assets/Logo.png')}
-                className="w-40 h-40" 
-            />
-            <Text className="text-center text-blue-500 text-lg mt-2.5">Location</Text>
-            <View className="h-px bg-black opacity-20 my-5" /> 
-            <TextBox
-                placeholder="Enter your street"
-                value={streetValue}
-                setValue={setStreetValue}
-                caption="Street"
-                captionAlignment="center"
-                className="w-60" 
-            />
-            <TextBox
-                placeholder="Enter your city"
-                value={cityValue}
-                setValue={setCityValue}
-                caption="City"
-                captionAlignment="center"
-                className="w-60" 
-            />
-            <TextBox
-                placeholder="Enter your country"
-                value={countryValue}
-                setValue={setCountryValue}
-                caption="Country"
-                captionAlignment="center"
-                className="w-60" 
-            />
-            <PrimaryButton
-                text={"Next"}
-                onClick={onNextClick}
-                className="mt-4" 
-            />
-            <View className="flex-row justify-center mt-5">
-                <View className="w-2.5 h-2.5 bg-blue-500 rounded-full mx-0.5" />
-                <View className="w-2.5 h-2.5 border border-blue-500 rounded-full mx-0.5" />
-                <View className="w-2.5 h-2.5 border border-blue-500 rounded-full mx-0.5" />
-                <View className="w-2.5 h-2.5 border border-blue-500 rounded-full mx-0.5" />
-            </View>
-        </View>
-    );
+  return (
+    <View className={`flex-1 justify-center items-center px-20`}>
+      <Entypo name="location-pin" size={80} color="#2980B9" />
+      <Text className={`font-semibold text-3xl text-secondary mt-4`}>
+        Permanent Address
+      </Text>
+      <View className={`border border-black-100 w-full my-4`} />
+      <TextBox
+        placeholder="No."
+        value={numValue}
+        setValue={(text) => setNumValue(text)}
+        captionAlignment="center"
+        className="mt-3"
+      />
+
+      <TextBox
+        placeholder="Street Name"
+        value={streetValue}
+        setValue={(text) => setStreetValue(text)}
+        captionAlignment="center"
+        className="mt-6"
+      />
+
+      <TextBox
+        placeholder="City Name"
+        value={cityValue}
+        setValue={(text) => setCityValue(text)}
+        captionAlignment="center"
+        className="mt-6"
+      />
+
+      <TextBox
+        placeholder="District"
+        value={districtValue}
+        setValue={(text) => setDistrictValue(text)}
+        captionAlignment="center"
+        className="mt-6"
+      />
+
+      <View className="mt-8 w-80">
+        <PrimaryButton
+          text={"Next"}
+          onClick={() => {
+            onNextClick();
+          }}
+        />
+      </View>
+
+      <View className={`mt-8`}>
+        <CircleSet circles={4} currentCircles={2} />
+      </View>
+    </View>
+  );
 };
 
 export default Location;
