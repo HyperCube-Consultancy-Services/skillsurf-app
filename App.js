@@ -22,7 +22,7 @@ export default function App() {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
         <View style={styles.container}>
           <NavigationContainer>
-            <Stack.Navigator initialRouteName="SignInScreen">
+            <Stack.Navigator initialRouteName="ChatScreen">
               <Stack.Screen name="SignInScreen" component={SignInScreen} options={{ headerShown: false }} />
               <Stack.Screen name="QuestionnaireScreen" component={QuestionnaireScreen} options={{ headerShown: false }} />
               <Stack.Screen name="ChatScreen" component={ChatScreen} options={{ headerShown: false }} />
