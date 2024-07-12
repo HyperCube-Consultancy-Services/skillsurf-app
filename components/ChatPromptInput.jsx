@@ -13,7 +13,7 @@ const ChatPrompInput = ({ onSend }) => {
       >
         <TextInput
           className={`mr-8 flex-grow`}
-          placeholder="Type a message"
+          placeholder="Type your answer"
           multiline={true}
           value={prompt}
           onChangeText={(text) => setPrompt(text)}
