@@ -5,8 +5,11 @@ import MessageBubble from "./MessageBubble";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import colors from "../assets/colors";
+import { useNavigation } from "@react-navigation/native";
 
 const ChatComponent = () => {
+  const navigation = useNavigation();
+
   const [questions, setQuestions] = useState([
     {
       id: 1,
@@ -36,7 +39,7 @@ const ChatComponent = () => {
     }
     setQuestions(questionsCopy);
     if (currentQuestion === questions.length) {
-      console.log("All questions answered");
+      navigation.navigate("QuestionnaireSuccess");
     } else {
       setCurrentQuestion(currentQuestion + 1);
       setAskedQuestions([...askedQuestions, currentQuestion + 1]);

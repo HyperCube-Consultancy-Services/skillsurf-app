@@ -50,7 +50,7 @@ const DropdownBox = ({
 const styles = StyleSheet.create({
   selectedTextStyle: {
     fontSize: 14,
-    color: "#003154",
+    color: "#000",
   },
   placeholderStyle: {
     fontSize: 14,

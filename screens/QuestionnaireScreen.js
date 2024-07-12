@@ -18,7 +18,7 @@ const QuestionnaireScreen = () => {
 
   useEffect(() => {
     if (currentStep > 3) {
-      navigation.navigate("QuestionnaireSuccess");
+      navigation.navigate("ChatScreen");
     }
   }, [currentStep]);
 

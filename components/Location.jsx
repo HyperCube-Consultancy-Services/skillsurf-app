@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, Text, Image } from "react-native";
 import TextBox from "../components/TextBox";
 import PrimaryButton from "./PrimaryButton";
+import DropdownBox from "./DropdownBox";
 import Entypo from "react-native-vector-icons/Entypo";
 import CircleSet from "./CircleSet";
 
@@ -10,7 +11,36 @@ const Location = ({ onNextClick }) => {
   const [numValue, setNumValue] = useState("");
   const [streetValue, setStreetValue] = useState("");
   const [cityValue, setCityValue] = useState("");
-  const [districtValue, setDistrictValue] = useState("");
+  const [districtValue, setDistrictValue] = useState("0");
+
+  const sriLankanDistricts = [
+    { value: "0", label: "Select District" },
+    { value: "Ampara", label: "Ampara" },
+    { value: "Anuradhapura", label: "Anuradhapura" },
+    { value: "Badulla", label: "Badulla" },
+    { value: "Batticaloa", label: "Batticaloa" },
+    { value: "Colombo", label: "Colombo" },
+    { value: "Galle", label: "Galle" },
+    { value: "Gampaha", label: "Gampaha" },
+    { value: "Hambantota", label: "Hambantota" },
+    { value: "Jaffna", label: "Jaffna" },
+    { value: "Kalutara", label: "Kalutara" },
+    { value: "Kandy", label: "Kandy" },
+    { value: "Kegalle", label: "Kegalle" },
+    { value: "Kilinochchi", label: "Kilinochchi" },
+    { value: "Kurunegala", label: "Kurunegala" },
+    { value: "Mannar", label: "Mannar" },
+    { value: "Matale", label: "Matale" },
+    { value: "Matara", label: "Matara" },
+    { value: "Monaragala", label: "Monaragala" },
+    { value: "Mullaitivu", label: "Mullaitivu" },
+    { value: "Nuwara Eliya", label: "Nuwara Eliya" },
+    { value: "Polonnaruwa", label: "Polonnaruwa" },
+    { value: "Puttalam", label: "Puttalam" },
+    { value: "Ratnapura", label: "Ratnapura" },
+    { value: "Trincomalee", label: "Trincomalee" },
+    { value: "Vavuniya", label: "Vavuniya" },
+  ];
 
   return (
     <View className={`flex-1 justify-center items-center px-20`}>
@@ -42,12 +72,12 @@ const Location = ({ onNextClick }) => {
         captionAlignment="center"
         className="mt-6"
       />
-
-      <TextBox
-        placeholder="District"
+      <DropdownBox
+        options={sriLankanDistricts}
+        placeholder="Select District"
         value={districtValue}
-        setValue={(text) => setDistrictValue(text)}
-        captionAlignment="center"
+        setValue={(value) => setDistrictValue(value)}
+        search={true}
         className="mt-6"
       />
 

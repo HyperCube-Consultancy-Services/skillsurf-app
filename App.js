@@ -14,6 +14,7 @@ import CareerPathsScreen from "./screens/CareerPathsScreen";
 import SingleCareerPathScreen from "./screens/SingleCareerPathScreen";
 import QuestionnaireStart from "./screens/QuestionnaireStart";
 import QuestionnaireSuccess from "./screens/QuestionnaireSuccess";
+import SplashScreen from "./screens/SplashScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -24,7 +25,8 @@ export default function App() {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
         <View style={styles.container}>
           <NavigationContainer>
-            <Stack.Navigator initialRouteName="SignInScreen">
+            <Stack.Navigator initialRouteName="SplashScreen">
+              <Stack.Screen name="SplashScreen" component={SplashScreen} options={{ headerShown: false }} />
               <Stack.Screen name="SignInScreen" component={SignInScreen} options={{ headerShown: false }} />
               <Stack.Screen name="QuestionnaireScreen" component={QuestionnaireScreen} options={{ headerShown: false }} />
               <Stack.Screen name="ChatScreen" component={ChatScreen} options={{ headerShown: false }} />
