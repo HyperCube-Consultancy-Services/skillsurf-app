@@ -26,17 +26,17 @@ const CareerPathsScreen = ({ }) => {
             {/* This is the white content as children */}
 
             <View className="flex-1 mx-5 mt-1">
-                <Text className="text-2xl font-bold text-primary my-3">Recommended Careers</Text>
+                <Text className="text-2xl font-bold text-primary my-2">Recommended Careers</Text>
                 <CarreerPaths topic='Information Technology' description='More matching' image={require('../assets/icons/IT.png')}  />
                 <CarreerPaths topic='Health Care' description='Based on qualifications' image={require('../assets/icons/IT.png')} />
                 <CarreerPaths topic='Business and Finance' description='Based on skills'image={require('../assets/icons/IT.png')} />
                 <CarreerPaths topic='Engineering' description='Based on interests' image={require('../assets/icons/IT.png')} />
-                <Text className="text-2xl font-bold text-primary mt-5 mb-2">What We Have Identified</Text>
+                <Text className="text-2xl font-bold text-primary mt-3 mb-2">What We Have Identified</Text>
                 <RowCard topic='Indetified Consents' />
                 <RowCard topic='Indetified Historical Skills' />
                 <RowCard topic='Indetified Past Achivements' />
                 <RowCard topic='Indetified Personality' />
-                <View className="w-full my-10 mx-36">
+                <View className="w-full my-5 mx-36">
                     <Button text='Home' onClick={() => { console.log('View All Clicked') }} />
                 </View>
             </View>
