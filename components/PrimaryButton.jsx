@@ -3,7 +3,7 @@ import colors from "../assets/colors";
 
 const PrimaryButton = ({
   text, // Mandatory
-  onClick, // Mandatory
+  onClick = () => {}, // Mandatory
   disabled = false, // Optional. Default is false
 }) => {
   return (

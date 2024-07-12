@@ -20,7 +20,7 @@ const ChatComponent = () => {
     },
     {
       id: 3,
-      question: "What are your hobbies?",
+      question: "Tell me something about your past achievements",
       answer: "",
     },
   ]);
