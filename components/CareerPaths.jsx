@@ -20,7 +20,7 @@ const CarreerPaths = (
                 <Text className="text-lg font-bold text-primary">{topic}</Text>
                 <Text className="text-md text-secondary">More matching</Text>
             </View>
-            <TouchableOpacity  style={{  alignSelf: 'flex-end' }}>
+            <TouchableOpacity  style={{alignSelf: 'flex-end' }}>
                     <Text className="text-sm text-secondary">See More
                         <FontAwesome name="chevron-right" size={15} color="black" />
                     </Text>

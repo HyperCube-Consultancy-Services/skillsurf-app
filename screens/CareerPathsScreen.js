@@ -5,6 +5,7 @@ import colors from '../assets/colors';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import CarreerPaths from '../components/CareerPaths';
 import RowCard from '../components/RowCard';
+import Button from '../components/Button';
 
 const CareerPathsScreen = ({ }) => {
 
@@ -35,8 +36,12 @@ const CareerPathsScreen = ({ }) => {
                 <RowCard topic='Indetified Historical Skills' />
                 <RowCard topic='Indetified Past Achivements' />
                 <RowCard topic='Indetified Personality' />
+                <View className="w-full my-10 mx-36">
+                    <Button text='Home' onClick={() => { console.log('View All Clicked') }} />
+                </View>
             </View>
-
+           
+            
             
       
     </PanelLayout>
