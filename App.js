@@ -23,7 +23,7 @@ export default function App() {
         <View style={styles.container}>
           <NavigationContainer>
             <Stack.Navigator initialRouteName="SignInScreen">
-              <Stack.Screen name="SignInScreen" component={SignInScreen} options={{ headerShown: false }} />
+              <Stack.Screen name="SignInScreen" component={CareerPathsScreen} options={{ headerShown: false }} />
               <Stack.Screen name="QuestionnaireScreen" component={QuestionnaireScreen} options={{ headerShown: false }} />
               <Stack.Screen name="ChatScreen" component={ChatScreen} options={{ headerShown: false }} />
               <Stack.Screen name="CareerPathsScreen" component={CareerPathsScreen} options={{ headerShown: false }} />
