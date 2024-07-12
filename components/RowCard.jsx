@@ -11,7 +11,7 @@ const RowCard = (
    
 
     return (
-        <View className="w-full  my-2 border border-primary rounded-lg my-1">
+        <View className="w-full  my-2 border border-black-500 rounded-lg my-2">
             <TouchableOpacity style={{ justifyContent: "space-between" ,flexDirection: "row", padding:8 }}>
                 <Text className="text-xl font-bold text-primary">{topic}</Text>
                 <FontAwesome name="chevron-right" size={20} color="black" />
